@@ -1,0 +1,17 @@
+{
+  "name": "chat_challenge",
+  "version": "0.0.0",
+  "description": "Competitive conversation app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Anthony Pinto <anthonyepinto@gmail.com>",
+  "dependencies": {
+    "socket.io" : "1.0.x",
+    "mime" : "~1.2.7",
+    "node-static" : "^0.7.4"
+    },
+  "license": "ISC"
+}
+
