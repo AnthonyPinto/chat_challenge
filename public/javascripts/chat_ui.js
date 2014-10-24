@@ -15,8 +15,19 @@
       event.preventDefault();
       this.send(this.$input.val());
     }.bind(this))
+    this.setHandlers();
   }
   _.extend(Challenge.ChatUI.prototype, {
+    
+    setHandlers: function () {
+
+      this.chat.socket.on('message', function (message) {
+        var text = message.body;
+
+        this.printOut(text);
+      }.bind(this));
+      
+    },
   
     getMessage: function(){
       return this.$input.val();
@@ -25,7 +36,7 @@
     send: function(){
       var message = this.getMessage();
       this.chat.sendMessage(message);
-      this.printOut(message);
+      // this.printOut(message);
     },
   
     printOut: function(message){
@@ -36,7 +47,7 @@
       $span2.text(message);
       $h.append($span1);
       $h.append($span2);
-      Challenge.ChatUI.$readout.append($h);
+      this.$readout.append($h);
     }
 
   })

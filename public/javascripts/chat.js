@@ -6,9 +6,11 @@
   Challenge.Chat = function(socket) {
     this.socket = socket
   }
-
-  Challenge.Chat.prototype.sendMessage = function (message) {
-    socket.emit('message', { body: 'message' });
-  }
+  
+  _.extend(Challenge.Chat.prototype, {
+    sendMessage: function (message) {
+      this.socket.emit('message', { body: message });
+    }
+  })
 
 }());
