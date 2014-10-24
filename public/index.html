@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Chat Challenge</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="javascripts/chat.js" ></script>
+    <script type="text/javascript" src="javascripts/chat_ui.js" ></script>
+    <script type="text/javascript" charset="utf-8">
+      var socket = io();
+      $(function () {
+        var chat = new Challenge.Chat(socket);
+        var chatUi = new Challenge.ChatUI(chat);
+      });
+    </script>
+  </head>
+  <body>
+    <h1>CHAT CHALLENGE</h1>
+    <div class="readout"></div>
+    <form>
+      <label for="message-body">Message Body:</label>
+      <input
+        id="message-body"
+        type="text">
+      <input
+        type="submit">
+      
+    </form>
+  </body>
+</html>
