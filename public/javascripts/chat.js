@@ -10,6 +10,10 @@
   _.extend(Challenge.Chat.prototype, {
     sendMessage: function (message) {
       this.socket.emit('message', { body: message });
+    },
+    
+    sendNickname: function (nickname) {
+      this.socket.emit('nicknameRequest', { nickname: nickname });
     }
   })
 

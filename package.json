@@ -8,10 +8,10 @@
   },
   "author": "Anthony Pinto <anthonyepinto@gmail.com>",
   "dependencies": {
-    "socket.io" : "1.0.x",
-    "mime" : "~1.2.7",
-    "node-static" : "^0.7.4"
-    },
+    "express": "^4.10.0",
+    "mime": "~1.2.7",
+    "node-static": "^0.7.4",
+    "socket.io": "1.0.x"
+  },
   "license": "ISC"
 }
-

@@ -1,4 +1,19 @@
 .readout {
   height:300px;
-  width:300px;
+  width:60%;
+  display:inline-block;
+  overflow-y: scroll;
+}
+
+.user-list {
+  height:300px;
+  width:30%;
+  display:inline-block;
+  overflow-y: scroll;
+}
+
+#nickname-form {
+  width:100%;
+  height:45px;
+  background-color:lightgreen;
 }

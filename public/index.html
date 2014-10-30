@@ -18,13 +18,26 @@
     </script>
   </head>
   <body>
+    <form id="nickname-form">
+      <label for="user-nickname">CURRENT NICKNAME:</label>
+      <span id="user-nickname"></span>
+      <br>
+      <label for="nickname-body">New Nickname:</label>
+      <input
+        id="nickname-body"
+        type="text">
+      <input
+        type="submit">
+    </form>
     <h1>CHAT CHALLENGE</h1>
     <div class="readout"></div>
-    <form>
-      <label for="message-body">Message Body:</label>
-      <input
-        id="message-body"
-        type="text">
+    <div class="user-list"></div>
+
+    <form id="message-form">
+      <label for="message-body">Message Body</label>
+      <br>
+      <textarea
+        id="message-body"></textarea>
       <input
         type="submit">
       
